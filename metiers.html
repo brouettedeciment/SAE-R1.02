@@ -62,106 +62,99 @@
       </nav>
     </header>
 
-  <main class = "metier">
-    <h1>Metiers</h1> <!--j'ai juste rajouté le tire :)-->
-    <ul class="cartes"> 
-      <li><ul class="metier">
-      <li>
-        <h2 id="Metier1">Metier 1</h2>
-      </li>
-      <li> 
-        <img src="placeholder.png" alt="Placeholder" />
-      </li>
-      <li>
-        <p>
-          place holder text, place holder text, place holder text, place holder
-          text, place holder text,
-        </p>
-      </li>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel Métiers</title>
 
-      <li>
-        <ul>
-          <li>
-            <span class="icon-book-open"></span>
-            <h3>Etude Etude Etude</h3>
-          </li>
-          <li>
-            <span class="icon-wallet"></span>
-            <h3>Salaire Salaire Salaire</h3>
-          </li>
-          <li>
-            <span class="icon-clock"></span>
-            <h3>Temps Temps Temps</h3>
-          </li>
-        </ul>
-      </li>
-      </ul></li>
+  <!-- Cloudflare Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cloudflare-icons/1.0.0/cloudflare-icons.min.css">
 
-    
-      <li><ul class="metier">
-      <li>
-        <h2 id="Metier2">Metier 1</h2>
-      </li>
-      <li> 
-        <img src="placeholder.png" alt="Placeholder" />
-      </li>
-      <li>
-        <p>
-          place holder text, place holder text, place holder text, place holder
-          text, place holder text,
-        </p>
-      </li>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <li>
-        <ul>
-          <li>
-            <span class="icon-book-open"></span>
-            <h3>Etude Etude Etude</h3>
-          </li>
-          <li>
-            <span class="icon-wallet"></span>
-            <h3>Salaire Salaire Salaire</h3>
-          </li>
-          <li>
-            <span class="icon-clock"></span>
-            <h3>Temps Temps Temps</h3>
-          </li>
-        </ul>
-      </li>
-      </ul></li>
+<main class="metier">
+  <h1>Métiers</h1>
 
+  <!-- ÉTATS : CENTRE -->
+  <input type="radio" name="slide" id="s1" checked>
+  <input type="radio" name="slide" id="s2">
+  <input type="radio" name="slide" id="s3">
+  <input type="radio" name="slide" id="s4">
 
+  <div class="carousel">
 
-      <li><ul class="metier">
-      <li>
-        <h2 id="Metier3">Metier 1</h2>
-      </li>
-      <li> 
-        <img src="placeholder.png" alt="Placeholder" />
-      </li>
-      <li>
-        <p>
-          place holder text, place holder text, place holder text, place holder
-          text, place holder text,
-        </p>
-      </li>
+    <!-- FLÈCHES GAUCHE -->
+    <label for="s1" class="arrow left s2 s3 s4">&#10094;</label>
+    <label for="s2" class="arrow left s3 s4">&#10094;</label>
+    <label for="s3" class="arrow left s4">&#10094;</label>
 
-      <li>
-        <ul>
-          <li>
-            <span class="icon-book-open"></span>
-            <h3>Etude Etude Etude</h3>
-          </li>
-          <li>
-            <span class="icon-wallet"></span>
-            <h3>Salaire Salaire Salaire</h3>
-          </li>
-          <li>
-            <span class="icon-clock"></span>
-            <h3>Temps Temps Temps</h3>
-          </li>
-        </ul>
-      </li>
-      </ul></li>
-  </main>
+    <div class="viewport">
+      <ul class="cartes">
+
+        <!-- ESPACE FANTÔME GAUCHE -->
+        <li class="spacer"></li>
+
+        <!-- METIER 1 -->
+        <li class="carte">
+          <h2>Métier 1</h2>
+          <img src="placeholder.png" alt="">
+          <p>Description métier 1</p>
+          <ul class="infos">
+            <li><span class="icon-book-open"></span><span>Études</span></li>
+            <li><span class="icon-wallet"></span><span>Salaire</span></li>
+            <li><span class="icon-clock"></span><span>Temps</span></li>
+          </ul>
+        </li>
+
+        <!-- METIER 2 -->
+        <li class="carte">
+          <h2>Métier 2</h2>
+          <img src="placeholder.png" alt="">
+          <p>Description métier 2</p>
+          <ul class="infos">
+            <li><span class="icon-book-open"></span><span>Études</span></li>
+            <li><span class="icon-wallet"></span><span>Salaire</span></li>
+            <li><span class="icon-clock"></span><span>Temps</span></li>
+          </ul>
+        </li>
+
+        <!-- METIER 3 -->
+        <li class="carte">
+          <h2>Métier 3</h2>
+          <img src="placeholder.png" alt="">
+          <p>Description métier 3</p>
+          <ul class="infos">
+            <li><span class="icon-book-open"></span><span>Études</span></li>
+            <li><span class="icon-wallet"></span><span>Salaire</span></li>
+            <li><span class="icon-clock"></span><span>Temps</span></li>
+          </ul>
+        </li>
+
+        <!-- METIER 4 -->
+        <li class="carte">
+          <h2>Métier 4</h2>
+          <img src="placeholder.png" alt="">
+          <p>Description métier 4</p>
+          <ul class="infos">
+            <li><span class="icon-book-open"></span><span>Études</span></li>
+            <li><span class="icon-wallet"></span><span>Salaire</span></li>
+            <li><span class="icon-clock"></span><span>Temps</span></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- FLÈCHES DROITE -->
+    <label for="s2" class="arrow right s1">&#10095;</label>
+    <label for="s3" class="arrow right s2">&#10095;</label>
+    <label for="s4" class="arrow right s3">&#10095;</label>
+
+  </div>
+</main>
+
+</body>
 </html>

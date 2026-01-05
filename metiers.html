@@ -21,7 +21,7 @@
         </div>
 
         <div class="dropdown">
-          <a href="Missions_Objectifs.html">Missions & Objectifs <i class="icon icon-arrow-down"></i
+          <a href="Missions_Objectifs.html">Missions & Objectifs<i class="icon icon-arrow-down"></i
           ></a>
           <div class="dropdown-content">
             <a href="Missions_Objectifs.html#Valeurs">Valeurs de l'entreprise</a>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="dropdown">
-          <a href="Metiers.html" class="active">Métiers <i class="icon icon-arrow-down"></i></a>
+          <a href="Metiers.html">Métiers <i class="icon icon-arrow-down"></i></a>
           <div class="dropdown-content">
             <a href="Metiers.html#Metier1">metier1</a>
             <a href="Metiers.html#Metier2">metier2</a>
@@ -62,87 +62,92 @@
       </nav>
     </header>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel Métiers</title>
 
-  <main class="metier">
-  <h1>Métiers</h1>
+  <!-- Cloudflare Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cloudflare-icons/1.0.0/cloudflare-icons.min.css">
 
-  <!-- ÉTATS : CENTRE -->
-  <input type="radio" name="slide" id="s1" checked>
-  <input type="radio" name="slide" id="s2">
-  <input type="radio" name="slide" id="s3">
-  <input type="radio" name="slide" id="s4">
-
-  <div class="carousel">
-
-    <!-- FLÈCHES GAUCHE -->
-    <label for="s1" class="arrow left s2 s3 s4">&#10094;</label>
-    <label for="s2" class="arrow left s3 s4">&#10094;</label>
-    <label for="s3" class="arrow left s4">&#10094;</label>
-
-    <div class="viewport">
-      <ul class="cartes">
-
-        <!-- ESPACE FANTÔME GAUCHE -->
-        <li class="spacer"></li>
-
-        <!-- METIER 1 -->
-        <li class="carte">
-          <h2>Métier 1</h2>
-          <img src="placeholder.png" alt="">
-          <p>Description métier 1</p>
-          <ul class="infos">
-            <li><span class="icon-book-open"></span><span>Études</span></li>
-            <li><span class="icon-wallet"></span><span>Salaire</span></li>
-            <li><span class="icon-clock"></span><span>Temps</span></li>
-          </ul>
-        </li>
-
-        <!-- METIER 2 -->
-        <li class="carte">
-          <h2>Métier 2</h2>
-          <img src="placeholder.png" alt="">
-          <p>Description métier 2</p>
-          <ul class="infos">
-            <li><span class="icon-book-open"></span><span>Études</span></li>
-            <li><span class="icon-wallet"></span><span>Salaire</span></li>
-            <li><span class="icon-clock"></span><span>Temps</span></li>
-          </ul>
-        </li>
-
-        <!-- METIER 3 -->
-        <li class="carte">
-          <h2>Métier 3</h2>
-          <img src="placeholder.png" alt="">
-          <p>Description métier 3</p>
-          <ul class="infos">
-            <li><span class="icon-book-open"></span><span>Études</span></li>
-            <li><span class="icon-wallet"></span><span>Salaire</span></li>
-            <li><span class="icon-clock"></span><span>Temps</span></li>
-          </ul>
-        </li>
-
-        <!-- METIER 4 -->
-        <li class="carte">
-          <h2>Métier 4</h2>
-          <img src="placeholder.png" alt="">
-          <p>Description métier 4</p>
-          <ul class="infos">
-            <li><span class="icon-book-open"></span><span>Études</span></li>
-            <li><span class="icon-wallet"></span><span>Salaire</span></li>
-            <li><span class="icon-clock"></span><span>Temps</span></li>
-          </ul>
-        </li>
-
-      </ul>
-    </div>
-
-    <!-- FLÈCHES DROITE -->
-    <label for="s2" class="arrow right s1">&#10095;</label>
-    <label for="s3" class="arrow right s2">&#10095;</label>
-    <label for="s4" class="arrow right s3">&#10095;</label>
-
+  <link rel="stylesheet" href="style.css">
+</head>
+</body>
+<main class="metier">
+<div class="container">
+  <div class="cardwrap">
+    <ul class="cardlist">
+      <li class="carditem">
+          <img src="data-icon.png" alt="Card image" class="cardimg">
+          <p class="badge">Ingénieur en science <br>des données</p>
+          <h4>Tu analyses les<br> données pour trouver<br> des tendances et <br>faire des <br>prédictions.
+Tu <br>aides à prendre <br>de meilleures <br>décisions grâce <br>aux chiffres.</h4>
+          <h2 class="cardtitle">
+            <span class="icon-graduation"></span> Bac +3
+            <br><br>
+            <span class="icon-credit-card"></span> 38 000/an
+            <br><br>
+            <span class="icon-hourglass"></span> CDI
+          </h2>
+      </li>
+      <li class="carditem">
+          <img src="dev-icon.png" alt="Card image" class="cardimg">
+          <p class="badge">Developpeur C#</p>
+          <h4>Tu écris le code des<br> logiciels, sites web<br> ou applications.
+Tu<br> transformes des<br> idées en<br> programmes qui<br> marchent.</h4>
+          <h2 class="cardtitle">
+            <span class="icon-graduation"></span> Bac +3
+            <br><br>
+            <span class="icon-credit-card"></span> 43 000/an
+            <br><br>
+            <span class="icon-hourglass"></span> CDI
+          </h2>
+      </li>
+      <li class="carditem">
+          <img src="data-engineer-icon.png" alt="Card image" class="cardimg">
+          <p class="badge">Ingénieur Data</p>
+          <h4>Tu construis les <br>“tuyaux” qui <br>transportent et<br>  stockent les<br> données.
+Tu <br>prépares les <br>données pour <br>qu’elles puissent<br> être utilisées <br>facilement.</h4>
+          <h2 class="cardtitle">
+            <span class="icon-graduation"></span> Bac +3
+            <br><br>
+            <span class="icon-credit-card"></span> 45 000/an
+            <br><br>
+            <span class="icon-hourglass"></span> CDI
+          </h2>
+      </li>
+      <li class="carditem">
+          <img src="analyst-engineer.png" alt="Card image" class="cardimg">
+          <p class="badge">Analyste développeur</p>
+          <h4>Tu comprends les<br> besoins des <br>utilisateurs et <br>tu développes le <br>logiciel.
+Tu <br>analyses le<br> problème puis tu<br> codes la solution.</h4>
+          <h2 class="cardtitle">
+            <span class="icon-graduation"></span> Bac +3
+            <br><br>
+            <span class="icon-credit-card"></span> 40 000/an
+            <br><br>
+            <span class="icon-hourglass"></span> CDI
+          </h2>
+      </li>
+      <li class="carditem">
+          <img src="architect-cloud.png" alt="Card image" class="cardimg">
+          <p class="badge">Architecte Cloud</p>
+          <h4>Conçoit et organise les <br>systèmes informatiques<br> 
+            sur Internet, décide <br>comment tout doit <br>fonctionner 
+            ensemble.</h4>
+          <h2 class="cardtitle">
+            <span class="icon-graduation"></span> Bac +5
+            <br><br>
+            <span class="icon-credit-card"></span> 60 000/an
+            <br><br>
+            <span class="icon-hourglass"></span> CDI
+          </h2>
+      </li>
+    </ul>
   </div>
+</div>
+
 </main>
 
-</body>
 </html>

@@ -1,25 +1,23 @@
 :root {
   --color-bg:  #c3d7f7;
-  /* Couleur de fond */
+  /* Couleur du fond */
   --color-primary: #1a5e7c; 
-  /* Couleur primaire, (bouton) */
+  /* Couleur primaire, pour CTA (Calls to action) */
   --color-secondary: #363434;
-  /* Couleur secondaire (bouton,bordure,frise,...)*/
+  /* Couleur secondaire, e.g., bouton secondaire, cartes */
   --color-bg2:rgba(1, 1, 1, 0.749);
-  /*Couleur de fond transparente*/
 }
-
 body {
   background-color: var(--color-bg);
+  flex-wrap: wrap;
   margin: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/*-----BARRE DE NAVIGATION-----*/
+/*barre de nav commune à toutes les pages*/
 header {
   background-color: var(--color-secondary);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -34,11 +32,6 @@ nav {
   padding: 40px;
 }
 
-/*-----MENU DEROULANT-----*/
-.dropdown {
-  position: relative;
-  z-index: 1;
-}
 
 .dropdown a {
   color: var(--color-bg);
@@ -69,17 +62,6 @@ nav {
   text-decoration: none;
 }
 
-/*-----ANIMATION FLECHE DU MENU-----*/
-.dropdown .icon-arrow-down {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.dropdown:hover .icon-arrow-down, .dropdown a.active .icon-arrow-down {
-  transform: rotate(180deg);
-}
-
-/*-----CONTENU COMMUN-----*/
 main {
   flex-wrap: wrap;
   margin: 0px 100px 30px 100px;
@@ -97,6 +79,7 @@ h2 {
   margin-bottom: 5px;
 }
 
+
 h3{
   font-size: large;
   margin-top: 0px;
@@ -108,44 +91,10 @@ p {
   margin: 5px 0px 5px 0px;
 }
 
-a {
-  text-decoration: none;
-}
+/*-----------------------------------------
+Bouton*/
 
-em {
-  font-size: x-large;
-}
-
-hr {
-  background-color: var(--color-secondary);
-  height: 1px;
-}
-
-li {
-  list-style-type: none;
-  font-size: large;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-img{
-  padding-left: 35px;
-  width: 150px;
-  height: 100px;
-}
-
-footer{
-  display: flex;
-  justify-content: space-around;
-}
-
-/*-----BOUTON-----*/
-
-/*Style 1*/
+/*Style de bouton 1*/
 .btn-primary { 
   font-size: large;
   padding: 10px;
@@ -154,7 +103,6 @@ footer{
   border: none;
   background-color: var(--color-primary);
   color: white;
-  transition: transform 0.2s;
 }
 
 .btn-primary a{
@@ -164,10 +112,10 @@ footer{
 }
 
 .btn-primary a:hover,.btn-primary:hover{
-  transform: scale(1.2);
+  color:black;
 }
 
-/*Style 2*/
+/*Style de bouton 2*/
 .btn-secondary { 
   font-size: large;
   border-radius: 8px;
@@ -184,29 +132,50 @@ footer{
   padding: 10px;
 }
 
-/*-----PAGE ACCUEUIL-----*/
-.accueil h2~h2{
+
+/*--------------------------------------------------------
+Page accueuil*/
+
+em {
+  font-size: x-large;
+}
+
+hr {
+  background-color: var(--color-secondary);
+  height: 1px;
+}
+
+
+footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+  font-size: large;
+}
+
+img{
+  padding-left: 35px;
+  width: 150px;
+  height: 100px;
+}
+
+.accueuil h2~h2{
   margin-top: 15px;
 }
 
-.accueil .btn-secondary{
+.accueuil .btn-secondary{
   margin-left: 750px;
 }
-.accueil .btn-primary{
+.accueuil .btn-primary{
   margin-left: 200px;
   margin-top: 10px;
 }
 
-.accueil{
+.accueuil{
   display: flex;
-}
-
-.accueil aside{
-  display: flex;
-  flex-direction: column;
-  margin-left:35px;
-  margin-right: 0px;
-  margin-top: 50px;
 }
 
 .anim{
@@ -216,12 +185,20 @@ footer{
   margin-bottom: 60px;
 }
 
+.accueuil aside{
+  display: flex;
+  flex-direction: column;
+  margin-left:35px;
+  margin-right: 0px;
+  margin-top: 50px;
+}
 .anim2{
   animation: blink 5s infinite;
   margin-top: 80px;
   height: auto;
   width: 70px;
 }
+
 
 @keyframes blink {
   0% { opacity: 1; }
@@ -238,9 +215,10 @@ footer{
 .anim2:nth-child(3) { animation-delay: 2.5s; }
 
   
-/*-----PAGE HISTOIRE-----*/
+/*-------------------------------------------------------------------------------
+Page Histoire */
 
-.frise{
+.frise {
   display: flex;
   align-items: center;
 }
@@ -281,6 +259,12 @@ footer{
   margin-bottom: 80px;
 }
 
+
+.rectangle{
+  display: flex;
+}
+
+
 /*rectangle qui s'affiche*/
 .info-box {
   display: none;
@@ -292,6 +276,7 @@ footer{
   border-radius: 15px;
 }
 
+/*Affichage quand on clique*/
 .info-box:target {
   display: block;
 }
@@ -300,10 +285,7 @@ footer{
   display: none;
 }
 
-.rectangle{
-  display: flex;
-}
-
+/*croix*/
 .close {
   float: right;
   text-decoration: none;
@@ -312,14 +294,15 @@ footer{
   font-size: 20px;
 }
 
-/*-----PAGE SECTEUR + ECOLOGIE-----*/
+/*-------------------------------------------------------------------------------
+Page Secteur et Transition ecologique */
 
 .alterne {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-
+/*sert pour plusieurs pages*/
 .texte_alterne{
   display: flex;
   flex-wrap: nowrap;
@@ -331,67 +314,32 @@ margin-right: 30px;
 margin-top: 10px;
 }
 
-/*-----PAGE CONTACT-----*/
-
-.contact{
-  display: grid;
-  grid-template-columns: 600px 1fr ;
+article p{
+  margin: px;
 }
 
-.contact section~section{
-  margin-top: 20px;
-}
 
-.contact section~section {
-  text-align: center;
-}
+/*---------------------------------------------------------------------------------------------------
 
-.info{
-  display: flex;
-  gap: 30px;
-}
 
-/*formulaire*/
-form *{
-  font-size: large;
-}
 
-form{
-  padding:0px 20px;
-  margin-top: 30px;
-  width: 500px;
-  border: solid var(--color-secondary) 2px;
-}
 
-form:nth-child(2){
-  text-align: center;
-}
 
-input{
-  margin-bottom: 10px;
-}
 
-textarea{
-  margin-bottom: 20px;
-}
 
-fieldset{
-  padding: 0px;
-  margin-bottom: 20px;
-  border: 0px;
-}
 
-legend{
-  text-align: center;
- font-style: italic;
- margin-bottom: 20px;
-}
 
-/*étoile*/
+
+
+
+
+
+/*Page de contact*/
 .rating {
   direction: rtl;
   text-align: center;
 }
+
 
 .rating input {
   display: none;
@@ -403,31 +351,54 @@ legend{
   color: gray;
 }
 
+/* étoiles colorées au clic */
 .rating input:checked ~ label {
   color: var(--color-secondary)
 }
 
-/*video*/
-iframe{
-  margin-top: 5px;
-  margin-bottom: 30px;
-  border: 4px solid var(--color-secondary) ;
+.info{
+  display: flex;
+  gap: 30px;
 }
 
-/*logo*/
-.logo {
-  width: 50px;
-  height: 50px;
-  margin: 20px 5px;
-  vertical-align: middle;
-  transition: transform 0.2s;
+form *{
+  font-size: large;
 }
 
-.logo:hover {
-  transform: scale(1.2);
+input{
+  margin-bottom: 10px;
 }
 
-/*-----MISSIONS ET OBJECTIFS-----*/
+textarea{
+  margin-bottom: 20px;
+}
+
+fieldset{
+  
+  padding: 0px;
+  margin-bottom: 20px;
+  border: 0px;
+}
+
+legend{
+  text-align: center;
+ font-style: italic;
+ margin-bottom: 20px;
+}
+
+
+form{
+  padding:0px 20px;
+  margin-top: 30px;
+  max-height: 900px;
+  max-width: 500px;
+  border: solid var(--color-secondary) 2px;
+}
+
+form:nth-child(2){
+  text-align: center;
+}
+/*Page Missions & Objectifs*/
 
 .mission article img{
   width: 70px;
@@ -448,131 +419,92 @@ iframe{
   width:auto;
 }
 
-/*-----PAGE METIER-----*/
 
-.metier * {
-  box-sizing: border-box;
-}
 
-input[type="radio"] {
-  display: none;
-}
 
-main.metier h1 {
-  text-align: center;
-  margin: 40px 0;
-}
 
-/* CAROUSEL */
-.carousel {
-  position: relative;
-  width: 100%;
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/* Page métier*/
+
+/*.cartes {
   display: flex;
-  justify-content: center;
-}
-
-/*fenêtre*/
-.viewport {
-  width: 900px; /* 3 × 300 */
-  overflow: hidden;
-}
-
-/*liste*/
-.cartes {
+  flex-direction: row;
+}:*
+/*
+.metier {
   display: flex;
-  transition: transform 0.6s ease;
-}
-
-/*espace fantôme*/
-.spacer {
-  width: 300px;
-  flex-shrink: 0;
-}
-
-/*carte*/
-.carte {
-  width: 300px;
-  flex-shrink: 0;
-  padding: 15px;
-  background-color: var(--color-primary);
-  border-radius: 12px;
-  text-align: center;
-  opacity: 0.4;
-  transition: opacity 0.6s ease;
-}
-
-/*image*/
-.carte img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-/*infos en colonne*/
-.infos {
-  display: flex;
+  background-color: rgb(43, 155, 192);
+  max-width: 500px;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5%;
+  margin-left: 0px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.infos li {
+.metier li {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.icon-book-open,
-.icon-wallet,
-.icon-clock {
-  font-size: 20px;
+.metier img {
+  padding: 20px;
+  max-width: 350px;
 }
 
-/*carte centrale*/
-#s1:checked ~ .carousel .cartes li:nth-child(2),
-#s2:checked ~ .carousel .cartes li:nth-child(3),
-#s3:checked ~ .carousel .cartes li:nth-child(4),
-#s4:checked ~ .carousel .cartes li:nth-child(5) {
-  opacity: 1;
+.metier ul {
+  padding-left: 0px;
+}
+.metier p {
+  padding: 20px;
+}
+*/
+.metier{
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  min-height : 50vh;
+}
+.metier img{
+  width: 100px;
+  height: 100px;
+}
+.metier .cardlist{
+  display : flex;
+  flex-wrap : wrap;
+}
+.metier .cardlist .carditem{
+  margin : 25px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 10px rgb(100, 100, 100, 0.5);
+  border : 2px solid black;
+  list-style: none;
 }
 
-/* déplacement */
-#s1:checked ~ .carousel .cartes {
-  transform: translateX(0);
+.metier .carditem .badge {
+  background-color: var(--color-bg);
+  color: black;
+  font-weight : 500;
+  font-size: 15px;
+  padding : 10px, 50px;
+  margin : 16px 0px 18px;
+  width: fit-content;
+  border-radius: 10px;
 }
 
-#s2:checked ~ .carousel .cartes {
-  transform: translateX(-300px);
-}
-
-#s3:checked ~ .carousel .cartes {
-  transform: translateX(-600px);
-}
-
-#s4:checked ~ .carousel .cartes {
-  transform: translateX(-900px);
-}
-
-/* flèches */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
-
-/* flèches conditionnelles*/
-.s1, .s2, .s3, .s4 {
-  display: none;
-}
-
-#s1:checked ~ .carousel .s1,
-#s2:checked ~ .carousel .s2,
-#s3:checked ~ .carousel .s3,
-#s4:checked ~ .carousel .s4 {
-  display: block;
+.metier p{
+  margin-left :15px;
 }

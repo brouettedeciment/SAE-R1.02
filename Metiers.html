@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+    />
+    <link rel="stylesheet" href="IBM.css" />
+
+    <title>Métiers / IBM</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="Accueil.html">
+        <img
+          src="https://logohistory.net/wp-content/uploads/2023/07/IBM-Logo-1967.png"
+          alt="Logo IBM"
+        />
+      </a>
+
+      <nav>
+        <div class="dropdown">
+          <a href="Histoire.html">
+            Histoire
+          </a>
+        </div>
+
+        <div class="dropdown">
+          <a href="Missions_Objectifs.html">
+            Missions & Objectifs <i class="icon icon-arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="Missions_Objectifs.html#Valeurs">Valeurs de l'entreprise</a>
+            <a href="Missions_Objectifs.html#R&D">Recherche & Développement</a>
+            <a href="Missions_Objectifs.html#P&C">Partenariats & Clients</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="Secteur.html">
+            Secteurs d'activités <i class="icon icon-arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="Secteur.html#Consulting">Consulting</a>
+            <a href="Secteur.html#Infrastructure">Infrastructure</a>
+            <a href="Secteur.html#Partenaires">Partenariats stratégiques</a>
+            <a href="Secteur.html#Red_Hat">Red Hat</a>
+            <a href="Secteur.html#Logiciel">Logiciel</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="Metiers.html" class="active">
+            Métiers <i class="icon icon-arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="Metiers.html#Metier1">Métier 1</a>
+            <a href="Metiers.html#Metier2">Métier 2</a>
+            <a href="Metiers.html#Metier3">Métier 3</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="Ecologie.html">
+            Transition écologique <i class="icon icon-arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="Ecologie.html#Engagement">Engagement écologique</a>
+            <a href="Ecologie.html#Initiatives">Initiatives environnementales</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="metier">
+      <h1>Métiers</h1>
+
+      <!-- ÉTATS : CENTRE -->
+      <input type="radio" name="slide" id="s1" checked />
+      <input type="radio" name="slide" id="s2" />
+      <input type="radio" name="slide" id="s3" />
+      <input type="radio" name="slide" id="s4" />
+
+      <div class="carousel">
+        <!-- FLÈCHES GAUCHE -->
+        <label for="s1" class="arrow left s2 s3 s4">&#10094;</label>
+        <label for="s2" class="arrow left s3 s4">&#10094;</label>
+        <label for="s3" class="arrow left s4">&#10094;</label>
+
+        <div class="viewport">
+          <ul class="cartes">
+            <!-- ESPACE FANTÔME GAUCHE -->
+            <li class="spacer"></li>
+
+            <!-- MÉTIER 1 -->
+            <li class="carte" id="Metier1">
+              <h2>Métier 1</h2>
+              <img src="placeholder.png" alt="Illustration métier 1" />
+              <p>Description du métier 1</p>
+              <ul class="infos">
+                <li>
+                  <span class="icon-book-open"></span>
+                  <span>Études</span>
+                </li>
+                <li>
+                  <span class="icon-wallet"></span>
+                  <span>Salaire</span>
+                </li>
+                <li>
+                  <span class="icon-clock"></span>
+                  <span>Temps</span>
+                </li>
+              </ul>
+            </li>
+
+            <!-- MÉTIER 2 -->
+            <li class="carte" id="Metier2">
+              <h2>Métier 2</h2>
+              <img src="placeholder.png" alt="Illustration métier 2" />
+              <p>Description du métier 2</p>
+              <ul class="infos">
+                <li><span class="icon-book-open"></span><span>Études</span></li>
+                <li><span class="icon-wallet"></span><span>Salaire</span></li>
+                <li><span class="icon-clock"></span><span>Temps</span></li>
+              </ul>
+            </li>
+
+            <!-- MÉTIER 3 -->
+            <li class="carte" id="Metier3">
+              <h2>Métier 3</h2>
+              <img src="placeholder.png" alt="Illustration métier 3" />
+              <p>Description du métier 3</p>
+              <ul class="infos">
+                <li><span class="icon-book-open"></span><span>Études</span></li>
+                <li><span class="icon-wallet"></span><span>Salaire</span></li>
+                <li><span class="icon-clock"></span><span>Temps</span></li>
+              </ul>
+            </li>
+
+            <!-- MÉTIER 4 -->
+            <li class="carte" id="Metier4">
+              <h2>Métier 4</h2>
+              <img src="placeholder.png" alt="Illustration métier 4" />
+              <p>Description du métier 4</p>
+              <ul class="infos">
+                <li><span class="icon-book-open"></span><span>Études</span></li>
+                <li><span class="icon-wallet"></span><span>Salaire</span></li>
+                <li><span class="icon-clock"></span><span>Temps</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FLÈCHES DROITE -->
+        <label for="s2" class="arrow right s1">&#10095;</label>
+        <label for="s3" class="arrow right s2">&#10095;</label>
+        <label for="s4" class="arrow right s3">&#10095;</label>
+      </div>
+    </main>
+  </body>
+</html>

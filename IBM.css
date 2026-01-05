@@ -185,23 +185,23 @@ footer{
 }
 
 /*-----PAGE ACCUEUIL-----*/
-.accueuil h2~h2{
+.accueil h2~h2{
   margin-top: 15px;
 }
 
-.accueuil .btn-secondary{
+.accueil .btn-secondary{
   margin-left: 750px;
 }
-.accueuil .btn-primary{
+.accueil .btn-primary{
   margin-left: 200px;
   margin-top: 10px;
 }
 
-.accueuil{
+.accueil{
   display: flex;
 }
 
-.accueuil aside{
+.accueil aside{
   display: flex;
   flex-direction: column;
   margin-left:35px;
@@ -494,7 +494,7 @@ main.metier h1 {
   width: 300px;
   flex-shrink: 0;
   padding: 15px;
-  background-color: rgb(43, 155, 192);
+  background-color: var(--color-primary);
   border-radius: 12px;
   text-align: center;
   opacity: 0.4;

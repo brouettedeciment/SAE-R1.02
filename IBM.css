@@ -1,23 +1,27 @@
 :root {
   --color-bg:  #c3d7f7;
-  /* Couleur du fond */
+  /* Couleur de fond */
   --color-primary: #1a5e7c; 
-  /* Couleur primaire, pour CTA (Calls to action) */
+  /* Couleur primaire, (bouton) */
   --color-secondary: #363434;
-  /* Couleur secondaire, e.g., bouton secondaire, cartes */
+  /* Couleur secondaire (bouton,bordure,frise,...)*/
   --color-bg2:rgba(1, 1, 1, 0.749);
+  /*Couleur de fond transparente*/
+  --color-bg3:rgb(232, 241, 241);
+  /*Couleur de fond  blanche*/
 }
+
 body {
   background-color: var(--color-bg);
-  flex-wrap: wrap;
   margin: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/*barre de nav commune à toutes les pages*/
+/*-----BARRE DE NAVIGATION-----*/
 header {
   background-color: var(--color-secondary);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -32,6 +36,11 @@ nav {
   padding: 40px;
 }
 
+/*-----MENU DEROULANT-----*/
+.dropdown {
+  position: relative;
+  z-index: 1;
+}
 
 .dropdown a {
   color: var(--color-bg);
@@ -62,6 +71,17 @@ nav {
   text-decoration: none;
 }
 
+/*-----ANIMATION FLECHE DU MENU-----*/
+.dropdown .icon-arrow-down {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .icon-arrow-down, .dropdown a.active .icon-arrow-down {
+  transform: rotate(180deg);
+}
+
+/*-----CONTENU COMMUN-----*/
 main {
   flex-wrap: wrap;
   margin: 0px 100px 30px 100px;
@@ -79,7 +99,6 @@ h2 {
   margin-bottom: 5px;
 }
 
-
 h3{
   font-size: large;
   margin-top: 0px;
@@ -91,10 +110,44 @@ p {
   margin: 5px 0px 5px 0px;
 }
 
-/*-----------------------------------------
-Bouton*/
+a {
+  text-decoration: none;
+}
 
-/*Style de bouton 1*/
+em {
+  font-size: x-large;
+}
+
+hr {
+  background-color: var(--color-secondary);
+  height: 1px;
+}
+
+li {
+  list-style-type: none;
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  padding-left: 35px;
+  width: 150px;
+  height: 100px;
+}
+
+footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+/*-----BOUTON-----*/
+
+/*Style 1*/
 .btn-primary { 
   font-size: large;
   padding: 10px;
@@ -103,6 +156,7 @@ Bouton*/
   border: none;
   background-color: var(--color-primary);
   color: white;
+  transition: transform 0.2s;
 }
 
 .btn-primary a{
@@ -112,10 +166,10 @@ Bouton*/
 }
 
 .btn-primary a:hover,.btn-primary:hover{
-  color:black;
+  transform: scale(1.2);
 }
 
-/*Style de bouton 2*/
+/*Style 2*/
 .btn-secondary { 
   font-size: large;
   border-radius: 8px;
@@ -132,50 +186,29 @@ Bouton*/
   padding: 10px;
 }
 
-
-/*--------------------------------------------------------
-Page accueuil*/
-
-em {
-  font-size: x-large;
-}
-
-hr {
-  background-color: var(--color-secondary);
-  height: 1px;
-}
-
-
-footer{
-  display: flex;
-  justify-content: space-around;
-}
-
-li {
-  list-style-type: none;
-  font-size: large;
-}
-
-img{
-  padding-left: 35px;
-  width: 150px;
-  height: 100px;
-}
-
-.accueuil h2~h2{
+/*-----PAGE ACCUEUIL-----*/
+.accueil h2~h2{
   margin-top: 15px;
 }
 
-.accueuil .btn-secondary{
+.accueil .btn-secondary{
   margin-left: 750px;
 }
-.accueuil .btn-primary{
+.accueil .btn-primary{
   margin-left: 200px;
   margin-top: 10px;
 }
 
-.accueuil{
+.accueil{
   display: flex;
+}
+
+.accueil aside{
+  display: flex;
+  flex-direction: column;
+  margin-left:35px;
+  margin-right: 0px;
+  margin-top: 50px;
 }
 
 .anim{
@@ -185,20 +218,12 @@ img{
   margin-bottom: 60px;
 }
 
-.accueuil aside{
-  display: flex;
-  flex-direction: column;
-  margin-left:35px;
-  margin-right: 0px;
-  margin-top: 50px;
-}
 .anim2{
   animation: blink 5s infinite;
   margin-top: 80px;
   height: auto;
   width: 70px;
 }
-
 
 @keyframes blink {
   0% { opacity: 1; }
@@ -215,10 +240,9 @@ img{
 .anim2:nth-child(3) { animation-delay: 2.5s; }
 
   
-/*-------------------------------------------------------------------------------
-Page Histoire */
+/*-----PAGE HISTOIRE-----*/
 
-.frise {
+.frise{
   display: flex;
   align-items: center;
 }
@@ -259,12 +283,6 @@ Page Histoire */
   margin-bottom: 80px;
 }
 
-
-.rectangle{
-  display: flex;
-}
-
-
 /*rectangle qui s'affiche*/
 .info-box {
   display: none;
@@ -276,7 +294,6 @@ Page Histoire */
   border-radius: 15px;
 }
 
-/*Affichage quand on clique*/
 .info-box:target {
   display: block;
 }
@@ -285,7 +302,10 @@ Page Histoire */
   display: none;
 }
 
-/*croix*/
+.rectangle{
+  display: flex;
+}
+
 .close {
   float: right;
   text-decoration: none;
@@ -294,15 +314,14 @@ Page Histoire */
   font-size: 20px;
 }
 
-/*-------------------------------------------------------------------------------
-Page Secteur et Transition ecologique */
+/*-----PAGE SECTEUR + ECOLOGIE-----*/
 
 .alterne {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-/*sert pour plusieurs pages*/
+
 .texte_alterne{
   display: flex;
   flex-wrap: nowrap;
@@ -314,46 +333,19 @@ margin-right: 30px;
 margin-top: 10px;
 }
 
-article p{
-  margin: px;
+/*-----PAGE CONTACT-----*/
+
+.contact{
+  display: grid;
+  grid-template-columns: 600px 1fr ;
 }
 
+.contact section~section{
+  margin-top: 20px;
+}
 
-/*---------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Page de contact*/
-.rating {
-  direction: rtl;
+.contact section~section {
   text-align: center;
-}
-
-
-.rating input {
-  display: none;
-}
-
-.rating label {
-  font-size: 30px;
-  cursor: pointer;
-  color: gray;
-}
-
-/* étoiles colorées au clic */
-.rating input:checked ~ label {
-  color: var(--color-secondary)
 }
 
 .info{
@@ -361,8 +353,20 @@ article p{
   gap: 30px;
 }
 
+/*formulaire*/
 form *{
   font-size: large;
+}
+
+form{
+  padding:0px 20px;
+  margin-top: 30px;
+  width: 500px;
+  border: solid var(--color-secondary) 2px;
+}
+
+form:nth-child(2){
+  text-align: center;
 }
 
 input{
@@ -374,7 +378,6 @@ textarea{
 }
 
 fieldset{
-  
   padding: 0px;
   margin-bottom: 20px;
   border: 0px;
@@ -386,19 +389,47 @@ legend{
  margin-bottom: 20px;
 }
 
-
-form{
-  padding:0px 20px;
-  margin-top: 30px;
-  max-height: 900px;
-  max-width: 500px;
-  border: solid var(--color-secondary) 2px;
-}
-
-form:nth-child(2){
+/*étoile*/
+.rating {
+  direction: rtl;
   text-align: center;
 }
-/*Page Missions & Objectifs*/
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  cursor: pointer;
+  color: gray;
+}
+
+.rating input:checked ~ label {
+  color: var(--color-secondary)
+}
+
+/*video*/
+iframe{
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border: 4px solid var(--color-secondary) ;
+}
+
+/*logo*/
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 20px 5px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/*-----MISSIONS ET OBJECTIFS-----*/
 
 .mission article img{
   width: 70px;
@@ -419,55 +450,57 @@ form:nth-child(2){
   width:auto;
 }
 
+/*-----PAGE METIER-----*/
 
-
-/*---------------------------------------------------------------------------------------------------*/
 /* Page métier*/
 
-.metier{
-  display : flex;
-  align-items : center; 
-  justify-content : center;
-  min-height : 50vh;
+.carditem{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.metier h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.metier article{
+  max-width: 200px;
+  max-height: 600px;
+  background-color:var(--color-bg3);
+  border-radius: 8px ;
+  border: solid 2px black;
+  box-shadow: 0 10px 10px var(--color-bg2);
+}
+
+.metier article:hover{
+  background-color: var(--color-bg2);
+  color:var(--color-bg3);
+} 
+
+.metier p{
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.metier h2{
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: large;
   text-align: center;
 }
+
+.metier ul{
+  margin: 20px 40px;
+  font-weight: bold;
+}
+
 .metier img{
-  width: 100px;
-  height: 100px;
-  border-radius: 5px 5px;
   padding: 0px;
+  margin: 0px 25px ;
+  height: 120px;
+  border: solid var(--color-bg2);
 }
-.metier .cardlist{
-  display : flex;
-  flex-wrap : wrap;
-}
-.metier .cardlist .carditem{
-  margin : 25px;
-  background-color: white;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 10px 10px rgb(100, 100, 100, 0.5);
-  border : 2px solid black;
-  list-style: none;
-
-}
-.badge{
-  padding: 5px 10px;
-}
-.metier .cardlist .carditem:hover{
-  border: 2px solid var(--color-primary);
-  background-color: var(--color-bg2);
-  color: white;
-}
-
-.metier .carditem .badge {
-  background-color: var(--color-bg);
-  color: black;
-  font-weight : 500;
-  font-size: 15px;
-  padding : 10px, 50px;
-  margin : 16px 0px 18px;
-  width: fit-content;
-  border-radius: 10px;
-}
-

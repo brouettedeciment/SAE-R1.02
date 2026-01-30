@@ -26,8 +26,8 @@ header {
 }
 
 header img{
-  width: 150px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin: 10px;
 }
 
@@ -43,14 +43,14 @@ nav {
 }
 
 .dropdown a {
-  color: var(--color-bg);
+  color: white;
   text-decoration: none;
   font-size: larger;
   padding: 30px;
 }
 
 .dropdown a:hover,.btn-secondary a:hover {
-  color: white;
+  color:var(--color-bg);
 }
 
 .dropdown-content {
@@ -67,7 +67,7 @@ nav {
 .dropdown-content a {
   display: block;
   padding: 20px 30px;
-  color: var(--color-bg);
+  color: white;
   text-decoration: none;
 }
 
@@ -128,10 +128,12 @@ li {
   font-size: large;
 }
 
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
 }
 
 img{
@@ -328,36 +330,26 @@ footer{
 }
 
 article img{
-margin-bottom:30px;
-margin-right: 30px;
-margin-top: 10px;
-height: 150px;
-}
-.alterne img {
-  background-color: #363434;
-  padding:0;
-  margin:0;
-  border-radius: 25%;;
+  margin: 10px 30px 30px 0px;
+  height: 150px;
 }
 
-#Red-Hat, #Infra{
+.texte_alterne img{
   margin-right: 20px;
+  margin-left: 0px;
 }
-
 /*-----PAGE CONTACT-----*/
 
 .contact{
   display: grid;
-  grid-template-columns: 600px 1fr ;
+  grid-template-columns: 700px 1fr ;
 }
 
 .contact section~section{
   margin-top: 20px;
+  text-align: left;
 }
 
-.contact section~section {
-  text-align: center;
-}
 
 .info{
   display: flex;
@@ -377,15 +369,21 @@ form{
 }
 
 form:nth-child(2){
-  text-align: center;
+  text-align:left;
 }
 
 input{
   margin-bottom: 10px;
+   background-color: var(--color-bg2);
+  color:var(--color-bg);
+  border-radius: 5px;
 }
 
 textarea{
   margin-bottom: 20px;
+  background-color: var(--color-bg2);
+  color:var(--color-bg);
+  border-radius: 5px;
 }
 
 fieldset{
@@ -398,26 +396,6 @@ legend{
   text-align: center;
  font-style: italic;
  margin-bottom: 20px;
-}
-
-/*étoile*/
-.rating {
-  direction: rtl;
-  text-align: center;
-}
-
-.rating input {
-  display: none;
-}
-
-.rating label {
-  font-size: 30px;
-  cursor: pointer;
-  color: gray;
-}
-
-.rating input:checked ~ label {
-  color: var(--color-secondary)
 }
 
 /*video*/
@@ -509,9 +487,11 @@ iframe{
   font-weight: bold;
 }
 
-.metier img{
-  padding: 0px;
+.image{
+  background-color: var(--color-bg2);
   margin: 0px 25px ;
-  height: 120px;
-  border: solid var(--color-bg2);
+  height: 130px;
+  width: 150px;
+  padding: 0px;
+  border-radius: 10px;
 }
